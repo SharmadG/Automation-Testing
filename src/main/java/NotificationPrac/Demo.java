@@ -4,10 +4,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
-import java.util.*;
 public class Demo {
     public static void main(String[] args) throws Exception{
         //create object ref of ChromeOptions class
@@ -43,8 +40,8 @@ public class Demo {
         catch (NoSuchElementException nsee){
             System.out.println("Element not found!");
         }
-        /*finally {
+        finally {
             driver.quit();
-        }*/
+        }
     }
 }
