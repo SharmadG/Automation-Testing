@@ -1,4 +1,4 @@
-package ActionOnMakeMyTrip;
+package AutomatingMakeMyTrip;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import java.time.Duration;

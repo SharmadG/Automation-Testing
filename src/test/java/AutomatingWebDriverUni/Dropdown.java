@@ -1,4 +1,4 @@
-package WebDriverUni;
+package AutomatingWebDriverUni;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
