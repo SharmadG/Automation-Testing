@@ -81,8 +81,8 @@ public class Bk {
         catch (Exception e){
             System.out.println("Some error occurred! "+e.getMessage());
         }
-        /*finally {
+        finally {
             driver.quit();
-        }*/
+        }
     }
 }
