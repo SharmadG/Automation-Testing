@@ -14,7 +14,6 @@ public class Bk {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         JavascriptExecutor outerWin = (JavascriptExecutor) driver;
-        JavascriptExecutor innerWin = (JavascriptExecutor)  driver;
         try {
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
             try {
@@ -60,29 +59,60 @@ public class Bk {
             catch (NoSuchElementException nsee) {
                 System.out.println("ChickenWing not found in the menu!");
             }
-            driver.findElement(By.xpath("//div[@class='burgertype__item burgertype__item_inactive' and contains(text(),'non-veg')]")).click();
             WebElement scrollableOuterDiv = driver.findElement(By.xpath("//div[@class='product-page_wrapper']"));
+            driver.findElement(By.xpath("//div[@class='burgertype__item burgertype__item_inactive' and contains(text(),'non-veg')]")).click();
             outerWin.executeScript("arguments[0].scrollTop += 900",scrollableOuterDiv);
             driver.findElement(By.xpath("/html/body/div[1]/div[3]/div/div[3]/div[1]/div[2]/div[6]/div/div/div[2]/div[2]/div[2]/button/div")).click();
             driver.findElement(By.xpath("/html/body/div[1]/div[3]/div/div[4]/div/div[1]/div/div/div/div/div[4]/div[2]/div[2]/button")).click();
+            int count=0;
             for (int i=0; i<3; i++){
                 driver.findElement(By.xpath("/html/body/div[1]/div[3]/div/div[4]/div/div[1]/div/div/div/div/div[4]/div[2]/div[2]/div/div[3]")).click();
-                System.out.println(i+1 + " Fries(L) added!");
+                count++;
             }
+            System.out.println(count + " Fries(L) added!");
             driver.findElement(By.xpath("/html/body/div[1]/div[3]/div/div[4]/div/div[1]/div/div/div/div/div[4]/div[3]/div[2]/button")).click();
             System.out.println("Peri Peri Fries added!");
-            WebElement scrollableInnerDiv = driver.findElement(By.xpath("(//div[@class='modal_wrapper undefined undefined']//descendant::div/div)[1]"));
+            //adding chocolate mouse
             WebElement chocoMou = driver.findElement(By.xpath("/html/body/div[1]/div[3]/div/div[4]/div/div[1]/div/div/div/div/div[6]/div[1]/div[2]/button"));
             ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",chocoMou);
             chocoMou.click();
             System.out.println("Chocolate Mouse added!");
+            driver.findElement(By.xpath("/html/body/div[1]/div[3]/div/div[4]/div/div[1]/div/div/div/div/div[7]/button")).click();
+            //navigating to snacks menu
+            WebElement snacks = driver.findElement(By.xpath("/html/body/div[1]/div[3]/div/div[1]/div/div/div[2]/div/div/div[6]/div"));
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",snacks);
+            snacks.click();
+            //adding peri peri spice mix
+            WebElement periPeri = driver.findElement(By.xpath("/html/body/div[1]/div[3]/div/div[3]/div[1]/div[2]/div[2]/div/div/div[2]/div[2]/div[2]/button/div"));
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",periPeri);
+            periPeri.click();
+            System.out.println("Peri Peri Spice mix added!");
+            driver.findElement(By.xpath("/html/body/div[1]/div[3]/div/div[4]/div/div[1]/div/div/div/div/div[6]/button")).click();
+            //adding masala hashbrown
+            WebElement masalaHashbrown = driver.findElement(By.xpath("/html/body/div[1]/div[3]/div/div[3]/div[1]/div[2]/div[9]/div/div/div[2]/div[2]/div[2]/button/div"));
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",masalaHashbrown);
+            masalaHashbrown.click();
+            System.out.println("Masala Hashbrown added!");
+            driver.findElement(By.xpath("/html/body/div[1]/div[3]/div/div[4]/div/div[1]/div/div/div/div/div[6]/button")).click();
+            //adding fiery hell dip
+            WebElement fieryHellDip = driver.findElement(By.xpath("/html/body/div[1]/div[3]/div/div[3]/div[1]/div[2]/div[5]/div/div/div[2]/div[2]/div[2]/button/div"));
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",fieryHellDip);
+            fieryHellDip.click();
+            System.out.println("Fiery Hell Dips added!");
+            driver.findElement(By.xpath("/html/body/div[1]/div[3]/div/div[4]/div/div[1]/div/div/div/div/div[6]/button")).click();
+            //adding peri peri fries medium
+            WebElement periPeriFries = driver.findElement(By.xpath("//*[@id=\"root\"]/div[3]/div/div[3]/div[1]/div[2]/div[7]/div/div/div[2]/div[2]/div[2]/button/div"));
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",periPeriFries);
+            periPeriFries.click();
+            System.out.println("Peri peri medium Fries added!");
+            driver.findElement(By.xpath("/html/body/div[1]/div[3]/div/div[4]/div/div[1]/div/div/div/div/div[6]/button")).click();
             System.out.println("Script executed successfully");
         }
         catch (Exception e){
             System.out.println("Some error occurred! "+e.getMessage());
         }
-        finally {
+        /*finally {
             driver.quit();
-        }
+        }*/
     }
 }
