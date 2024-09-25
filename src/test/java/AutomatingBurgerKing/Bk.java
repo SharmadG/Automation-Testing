@@ -106,13 +106,21 @@ public class Bk {
             periPeriFries.click();
             System.out.println("Peri peri medium Fries added!");
             driver.findElement(By.xpath("/html/body/div[1]/div[3]/div/div[4]/div/div[1]/div/div/div/div/div[6]/button")).click();
+            //click on cart
+            driver.findElement(By.xpath("//ul/li/span[contains(text(),'Cart')]")).click();
+            //click on login to place order
+            driver.findElement(By.xpath("//button[@type='button']/span[1]")).click();
+            //send value to enter mobile number textfield
+            driver.findElement(By.xpath("/html/body/div[1]/div[3]/div/div/div[3]/div/div[1]/div/div/div/div[2]/div[1]/div[2]/input")).sendKeys("9876543210");
+            //get otp
+            driver.findElement(By.xpath("/html/body/div[1]/div[3]/div/div/div[3]/div/div[1]/div/div/div/div[2]/div[2]/button")).click();
             System.out.println("Script executed successfully");
         }
         catch (Exception e){
             System.out.println("Some error occurred! "+e.getMessage());
         }
-        /*finally {
+        finally {
             driver.quit();
-        }*/
+        }
     }
 }
