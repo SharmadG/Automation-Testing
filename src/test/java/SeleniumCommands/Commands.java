@@ -47,7 +47,7 @@ public class Commands {
         //Input text in input box
         //Submit the form
         driver.get("https://the-internet.herokuapp.com/login");
-        driver.findElement(By.name("username")).sendKeys("tomsmith");
+        driver.findElement(By.name("username")).sendKeys("sharmadG");
         driver.findElement(By.name("password")).sendKeys("SuperSecretPassword!");
         driver.findElement(By.className("radius")).click();
         System.out.println(driver.getCurrentUrl());
