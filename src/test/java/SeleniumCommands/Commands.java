@@ -43,7 +43,7 @@ public class Commands {
         driver.get("https://the-internet.herokuapp.com/dropdown");
         Select selectByValue = new Select(driver.findElement(By.id("dropdown")));
         selectByValue.selectByVisibleText("Option 1");
-        //Select a element
+        //Select an element
         //Input text in input box
         //Submit the form
         driver.get("https://the-internet.herokuapp.com/login");
