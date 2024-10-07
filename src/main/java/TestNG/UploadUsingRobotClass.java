@@ -10,6 +10,7 @@ import java.awt.*;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 import java.time.Duration;
+//Using Annotations
 @Test
 public class UploadUsingRobotClass {
     public void UploadUsingRobotClass() throws AWTException, InterruptedException {
