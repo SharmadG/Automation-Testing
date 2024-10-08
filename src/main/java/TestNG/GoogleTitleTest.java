@@ -1,4 +1,5 @@
 package TestNG;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
@@ -17,11 +18,16 @@ public class GoogleTitleTest {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         driver.get("http://www.google.com");
     }
-    @Test()
+    /*@Test()
     public void googleTitleTest(){
         String title = driver.getTitle();
         System.out.println(title);
         Assert.assertEquals(title, "Google", "Title not matched");
+    }*/
+    @Test ()
+    public void googleLogoTest(){
+        boolean b = driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/img")).isDisplayed();
+        Assert.assertTrue(b); // B should be true here
     }
     @AfterMethod
     public void tearDown(){
