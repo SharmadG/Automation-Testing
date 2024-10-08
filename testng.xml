@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="/home/sharmad/IdeaProjects/Automation-Testing/src/main/java/TestNG">
+        <classes>
+            <class name="TestNG.GoogleTest"/>
+            <class name="TestNG.GoogleTitleTest"/>
+            <class name="TestNG.TestNgBasics"/>
+            <class name="TestNG.TestNgFeatures"/>
+            <class name="TestNG.UploadAndDownload"/>
+        </classes>
+    </test>
+</suite>
