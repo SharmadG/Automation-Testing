@@ -1,2 +1,4 @@
 2024-10-08 12:37:39,657 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/sharmad/git/Automation-Testing/src/main/resources
 2024-10-08 12:37:39,662 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/sharmad/git/Automation-Testing/src/test/resources
+2024-10-08 12:39:35,164 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/sharmad/git/Automation-Testing/src/main/resources
+2024-10-08 12:39:35,168 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/sharmad/git/Automation-Testing/src/test/resources

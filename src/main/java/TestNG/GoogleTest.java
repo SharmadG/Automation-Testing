@@ -1,4 +1,3 @@
-/*
 package TestNG;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -47,4 +46,4 @@ public class GoogleTest {
     public void tearDown(){
         driver.quit();
     }
-}*/
+}
