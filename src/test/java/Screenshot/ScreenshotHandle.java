@@ -19,6 +19,5 @@ public class ScreenshotHandle {
         File file = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         //2. Copy the screenshot to desired location using copyfile method:
         FileUtils.copyFile(file, new File("C:/Users/Sharmad Gondkar/IdeaProjects/Automation-Testing/src/test/java/Screenshot/"+fileName+".jpg"));
-
     }
 }
