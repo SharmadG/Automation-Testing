@@ -4,11 +4,19 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 public class MouseRightClick {
-    public static void main(String[] args) {
-        WebDriver driver = new ChromeDriver();
+    WebDriver driver;
+    @BeforeMethod
+    public void createDriver(){
+        driver = new ChromeDriver();
         driver.get("http://swisnl.github.io/jQuery-contextMenu/demo.html");
         driver.manage().window().maximize();
+    }
+    @Test
+    public void test1(){
         Actions act = new Actions(driver);
         WebElement button = driver.findElement(By.xpath("/html/body/div/section/div/div/div/p/span"));
         act.contextClick(button).build().perform(); //Right-click on the element
@@ -16,6 +24,9 @@ public class MouseRightClick {
         System.out.println(driver.switchTo().alert().getText()); //print the text from the alert
         driver.switchTo().alert().accept(); //click ACCEPT or CONTINUE on the alert box to close the Alert
         System.out.println("Script executed Successfully!");
+    }
+    @AfterMethod
+    public void tearDown(){
         driver.quit();
     }
 }
