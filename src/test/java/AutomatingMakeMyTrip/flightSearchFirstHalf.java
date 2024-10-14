@@ -23,11 +23,11 @@ public class flightSearchFirstHalf {
             driver.findElement(By.xpath("//p[contains(text(),'Goa - Dabolim Airport, India')]")).click();
             //driver.findElement(By.xpath("//span[contains(text(),'Departure')]")).click();
             //departureDate
-            driver.findElement(By.xpath("//div[@aria-label='Mon Sep 30 2024']")).click();
+            driver.findElement(By.xpath("//div[@aria-label='Wed Oct 30 2024']")).click();
             //returnDate
             driver.findElement(By.xpath("//div[@class='flt_fsw_inputBox dates reDates inactiveWidget ']")).click();
             driver.findElement(By.xpath("//span[@aria-label='Next Month']")).click();
-            driver.findElement(By.xpath("//div[@aria-label='Sat Oct 19 2024']")).click();
+            driver.findElement(By.xpath("//div[@aria-label='Sat Nov 30 2024']")).click();
             //travellersAndClass
             driver.findElement(By.xpath("//div[@data-cy='flightTraveller']")).click();
             driver.findElement(By.xpath("//ul[@class='guestCounter font12 darkText gbCounter']/li[@data-cy='adults-3']")).click();
